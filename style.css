@@ -1,0 +1,38 @@
+
+    form {
+       
+        list-style-type:none;
+        font-size: 40px;
+        border: 10px solid blue
+      }
+  
+      .header h1 {
+        display: inline-block;
+        margin-left: 0px;
+        font-size: 48px;
+    }
+    
+    
+    .header div {
+        padding-top: 15px;
+        margin-right: 20px;
+        float: right;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 20px;
+    }
+    
+    
+    
+    .header div li{
+        display: inline-block;
+        margin-left: 48px;
+        font-size: 48px;
+    }
+
+    #art1 {
+        text-align: center;
+    }
+
+    #questionsList {
+        text-align: center;
+    }
