@@ -1,17 +1,34 @@
 
-var questions  =  [ 
-  {
-    question:"what is your name", 
-    choices:["Ali","hung","tara" ],
-    answer: 1
-  },      
+
+let numChoices=4;
 
 
+var questions = [
+  {   
+      questionP: "Commonly used data types DO NOT include:",
+      choices: ["1. alerts", "2. strings", "3. booleans", "4. numbers"],
+      answer: "1. alerts",
+  },
   {
-    question:"what is your last name", 
-    choices:["choice 1","choice 2","choice 3" ],
-    answer: 1
-  }
+      questionP: "The condition in an if / else statement is enclosed within ____.",
+      choices: ["1. quotes", "2. curly brackets", "3. parentheses", "4. square brackets"],
+      answer: "3. parentheses",
+  },
+  {
+      questionP: "Which of the following is not a primitive data set?",
+      choices: ["1. boolean", "2. object", "3. number", "4. string"],
+      answer: "2. object",
+  },
+  {
+      questionP: "Which of the following is used when invoking a function?",
+      choices: ["1. quotes", "2. curly brackets", "3. square brackets", "4. parentheses"],
+      answer: "4. parentheses",
+  },
+  {
+      questionP: "Complex data types include:",
+      choices: ["1. arrays", "2. strings", "3. booleans", "4. numbers"],
+      answer: "1. arrays",
+  },
 ];
 
 
@@ -55,13 +72,34 @@ var vectTwo= ["n","n","n","y","n",  "n","n","y","n","n",
 //document.getElementById("questionsList").appendChild(accent);
 
 
-for (let j=0;j<questions.length;j++) {
-var accentTwo=document.createElement("p");
-accentTwo.innerHTML=questions[j].question;
-accentTwo.innerHTML=questions[j].choices;
-document.getElementById("questionsList").appendChild(accentTwo);
-document.getElementById("questionsList").setAttribute("data-state", vectTwo[j]); 
+//for (let j=0;j<questions.length;j++) {
+//var accentTwo=document.createElement("p");
+//accentTwo.innerHTML=[questions[j].question.choices];
+//accentTwo.innerHTML=questions[0].choices;
+//accentTwo.innerHTML=questions[j].answer;
+//document.getElementById("questionsList").appendChild(accentTwo);
+//document.getElementById("questionsList").setAttribute("data-state", vectTwo[j]); 
+//}
+
+
+
+for (let j=0;j<1;j++) {
+    for (i=0;i<numChoices;i++) {
+      var accentTwo=document.createElement("p");
+      
+      accentTwo.innerHTML=questions[j].choices[i];
+      //accentTwo.innerHTML=questions[j].questionP;
+      document.getElementById("questionsList").appendChild(accentTwo);
+      document.getElementById("questionsList").setAttribute("data-state", vectTwo[j]); 
+    }
 }
+
+
+
+
+
+
+
 
 var secondsLeft =7;
 var timeEl = document.querySelector("#timer2");
@@ -85,22 +123,23 @@ function setTime() {
 }
 setTime();
 
-
-var listContainer=document.querySelector("#questionsList");
-listContainer.addEvenListener("click",function(event) {
+var listContainer=document.querySelector(" #questionsList ");
+listContainer.addEventListener("click",function(event) {
 var element=event.target;
 
-if (element.right("p")) {
+    if (element.right("p")) {
 
-  var state=element.getAttribute("data-state");
+    var state=element.getAttribute("data-state");
+         
+
 
         if (state===1) {
-          secondsLeft=100;
+          document.getElementById("demo").textContent = "I have changed!";
 
         } else {
-          secondsLeft=0;
+          window.document.getElementById("demo").textContent = "I have tttttc!";
         }         
-}
+    }
 
 });
    
